@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="app/app.css">
+  <title>Simple Controller Testing</title>
+  <script src="app/angular.js"></script>
+  <script src="app/session.controller.js"></script>
+  <script src="app/session.service.js"></script>
+  <script src="app/app.js"></script>
+</head>
+<body ng-app="app">
+  <div ng-controller="sessionController as vm">
+    <h1>Welcome to my App, please sign in</h1>
+
+    <div ng-show="vm.session.user">
+      Logged in as {{vm.session.user.name}}
+      <a class="logout" ng-click="vm.logout()">logout</a>
+    </div>
+
+    <div ng-hide="vm.session.user">
+      <input ng-model="vm.user.name" />
+      <button ng-click="vm.login(vm.user)">login</a>
+    </div>
+
+  </div>
+</body>
+</html>
