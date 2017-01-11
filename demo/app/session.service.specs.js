@@ -1,6 +1,5 @@
 
 describe('sessionService without ngMocks', () => {
-
   var sessionService;
   beforeEach(() => {
     sessionService = new app.sessionService();
@@ -13,15 +12,14 @@ describe('sessionService without ngMocks', () => {
   describe('logging in', () => {
     var user ;
     beforeEach( () => {
-      user = {}
+      user = {};
     });
 
     it('should be able to log in', () => {
       sessionService.login(user);
       expect(sessionService.session.user).toBe(user);
-    })
+    });
   });
-
 });
 
 
@@ -46,7 +44,6 @@ describe('sessionService with ngMocks', () => {
     it('should be able to log in', () => {
       sessionService.login(user);
       expect(sessionService.session.user).toBe(user);
-    })
+    });
   });
-
-})
+});

@@ -50,9 +50,9 @@ describe('app', () =>{
     it('should be able to log in', () => {
       sessionService.login(user);
       expect(sessionService.session.user).toBe(user)
-    })
-  })
-})
+    });
+  });
+});
 ```
 
 ## Testing services with ngMocks
